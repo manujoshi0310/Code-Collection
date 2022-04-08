@@ -3,5 +3,5 @@
 using namespace std;
 
 int main(){
-    cout << (int)"b" + 1;
+    cout << (int)'a';
 }
