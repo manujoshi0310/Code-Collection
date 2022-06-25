@@ -1,0 +1,1 @@
+max(min(arr[n-1]+k,heightDiffernce(arr, n-1, k)),min(arr[n-1]-k,heightDiffernce(arr, n-1, k)))
