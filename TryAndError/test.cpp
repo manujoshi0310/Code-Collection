@@ -5,9 +5,14 @@ using namespace std;
 int main(){
     vector<int> vec;
     vec.push_back(6);
-    string str1 = "manu",str;
-    int n=15;
-    sort(str1.begin(), str1.end());
+    vec.push_back(7);
+    vec.push_back(8);
+    vec.push_back(9);
+    vec.push_back(1);
+    vec.push_back(2);
+    vec.erase(vec.begin());
+    
+    for (int num: vec)
+        cout << num << endl;
 
-    cout <<floor(sqrt(n));
 }
