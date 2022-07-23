@@ -16,6 +16,9 @@ string PrintSCS(string X, string Y, int m, int n){
         else
         t[i][j]=max(t[i-1][j],t[i][j-1]);
     }
+    
+    //VARIATION
+    
     int i=m,j=n;
     string s;
     while(i>0 && j>0){
