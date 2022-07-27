@@ -12,9 +12,9 @@ bool solve(string a, string b){
     bool flag=false, case1, case2;
     
     for(int k=1;k<n;k++){
-        case1 = solve(a.substr(0,k),b.substr(k,n-k)) && solve(a.substr(n-k,k),b.substr(0,k));
+        case1 = solve(a.substr(0,k),b.substr(n-k,k)) && solve(a.substr(k,n-k),b.substr(0,n-k));
         case2 = solve(a.substr(0,k),b.substr(0,k)) && solve(a.substr(k,n-k),b.substr(k,n-k));
-        if(case1||case2){
+        if(case1==true||case2==true){
             flag = true;
             return flag;
         }
