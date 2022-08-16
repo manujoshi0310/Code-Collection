@@ -11,5 +11,5 @@ bool isRotation(string a, string b){
 
 int main(){
     cout<<isRotation("cdba","abcd");
-    return 0;
+    //return 0;
 }
