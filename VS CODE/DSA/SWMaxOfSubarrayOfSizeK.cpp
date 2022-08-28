@@ -6,6 +6,10 @@ vector<int> maxOfSubarrOfSizeK(vector<int> arr, int k){
     int i=0,j=0;
     list<int> l;
     vector<int> ans;
+    if(arr.size()<k){
+        ans.push_back(*max(arr.begin(), arr.end()));
+        return (ans);
+    }
     while(j<arr.size()){
         
         while(l.size()>0 && l.back()<arr[j])l.pop_back();
