@@ -3,18 +3,20 @@ import java.util.*;
 
 public class inputText {
     public static void main(String[] args) {
-        input ip1 = new input();         
+        input ip1 = new input();  
+        ip1.inputText();       
     }
 }
 
 class input{
 
-    void inputText(){
+  void inputText(){
       try {
         String addr = new String();
-        System.out.println("Enter File path:");
+        System.out.println("Enter File name:");
         Scanner sc = new Scanner(System.in);
         addr = sc.nextLine();
+        addr = "C:\\Users\\Manu\\Documents\\MinorProjectDirectory\\" + addr;
         File myObj = new File(addr);
         if (myObj.createNewFile()) {
           System.out.println("File created: " + myObj.getName());
@@ -30,5 +32,8 @@ class input{
     }
   }
 
-
+  void deleteFile(File myObj){
+    if(myObj.delete()) System.out.println("File deleted successfully");
+    else System.out.println("File not deleted");
+  }
 }
