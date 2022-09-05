@@ -2,15 +2,12 @@ import java.io.*;
 import java.util.*;
 
 public class inputText {
-    public static void main(String[] args) {
-        input ip1 = new input();  
-        ip1.inputText();       
-    }
+    
 }
 
 class input{
 
-  void inputText(){
+  public void inputText(){
       try {
         String addr = new String();
         System.out.println("Enter File name:");
@@ -32,8 +29,19 @@ class input{
     }
   }
 
-  void deleteFile(File myObj){
-    if(myObj.delete()) System.out.println("File deleted successfully");
-    else System.out.println("File not deleted");
+  public void deleteText(){
+    String addr, confirm;
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter file name to delete:");
+    addr = sc.nextLine();
+    addr = "C:\\Users\\Manu\\Documents\\MinorProjectDirectory\\" + addr;
+    File myObj = new File(addr);
+    System.out.println("Are you sure you want to delete the file?(type yes to confirm)");
+    confirm = sc.nextLine();
+    if(confirm=="yes"){
+      if(myObj.delete()) System.out.println("File deleted successfully");
+      else System.out.println("File not deleted");
+    }
+    sc.close();
   }
 }
