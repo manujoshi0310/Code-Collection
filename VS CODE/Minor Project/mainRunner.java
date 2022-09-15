@@ -13,9 +13,9 @@ public class mainRunner {
         choice = sc.nextInt();
         sc.close();
         while(true){
-            if(choice==1) i.inputText();
-            else if(choice==2) i.deleteText();
-            else break;
+           // if(choice==1) i.inputText();
+            //else if(choice==2) i.deleteText();
+            //else break;
         }
         
     }
