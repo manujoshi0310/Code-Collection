@@ -19,9 +19,23 @@ struct Node{
 void preOrder(Node* node){
     // cout << "2\n";
     if(node==NULL)return;
-    cout << node->value << endl;
+    cout << node->value << "\t";
     preOrder(node->left);
     preOrder(node->right);
+}
+void inOrder(Node* node){
+    // cout << "2\n";
+    if(node==NULL)return;
+    inOrder(node->left);
+    cout << node->value << "\t";
+    inOrder(node->right);
+}
+void postOrder(Node* node){
+    // cout << "2\n";
+    if(node==NULL)return;
+    postOrder(node->left);
+    postOrder(node->right);
+    cout << node->value << "\t";
 }
 
 struct Node * newNode(int data) {
@@ -46,6 +60,10 @@ int main(){
     root -> right -> right -> right = newNode(10);
     vector<int> op;
     preOrder(root);
+    cout << endl;
+    inOrder(root);
+    cout << endl;
+    postOrder(root);
     // for(int i=0;i<op.size();i++)cout << op[i] << " ";
     return 0;
 }
