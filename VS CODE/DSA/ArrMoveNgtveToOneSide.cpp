@@ -16,7 +16,7 @@ vector<int> moveNgtveToOneSide(vector<int> arr){
 }
 
 int main(){
-    vector<int> arr{3,4,-1,5,-6,-10,7,-15,15,-30};
+    vector<int> arr{3,-4,-1,-5,-6,-10,-7,-15,-15,-30};
     arr = moveNgtveToOneSide(arr);
     for (int i = 0; i < arr.size(); i++){
         cout << arr[i] << " ";
