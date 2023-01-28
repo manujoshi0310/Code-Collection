@@ -13,7 +13,6 @@ string validJumble(string a, string b, string c){
 
 int main(){
     cout << validJumble("XY","12","1XY2") << endl;
-    cout << validJumble("XY","12","21XY2")<< endl;
-    
+    cout << validJumble("XY","12","21XY2") << endl;
     return 0;
 }
