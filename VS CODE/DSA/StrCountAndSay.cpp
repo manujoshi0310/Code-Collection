@@ -3,20 +3,30 @@
 using namespace std;
 
 string countAndSay(int n){
-    string str="1";
+    string str="1", str2="";
     int x;
     if(n==1)return str;
     for(int i=2;i<=n;i++){
-        // if(i==1)str.append("1");
-        map<char,int> mp;
-        for(auto x:str)mp[x]++;
-        str="";
-        for(auto s:mp)str.append(to_string(s.second)+s.first);
+        int cnt=0;
+        for(int j=0;j<str.size();j++){
+            cnt++;
+            if(j!=str.size()-1&&str[j]!=str[j+1]){
+                str2.append(to_string(cnt)+str[j]);
+                cnt=0;
+            }
+            if(j==str.size()-1){
+                str2.append(to_string(cnt)+str[j]);
+                cnt=0;
+            }
+        }
+        str=str2;
+        str2="";
     }
+    
     return str;
 }
 
 int main(){
-    cout << countAndSay(4);
+    cout << countAndSay(7);// 1 11 21 1211 111221 312211 13112221 1113213211.........
     return 0;
 }
