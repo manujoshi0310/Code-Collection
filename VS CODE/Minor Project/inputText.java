@@ -10,7 +10,7 @@ class input{
         // System.out.println("Enter File name:");
         //if (sc.hasNext()) addr = sc.next();
         // addr = sc.nextLine();
-        addr = "C:\\Users\\Manu\\Documents\\MinorProjectDirectory\\" + addr;
+        addr = "C:/Users/Manu/Documents/MinorProjectDirectory/" + addr;
         File myObj = new File(addr);
         if (myObj.createNewFile()) {
           System.out.println("File created: " + myObj.getName());
