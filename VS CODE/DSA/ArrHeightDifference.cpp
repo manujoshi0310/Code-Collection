@@ -3,9 +3,16 @@
 using namespace std;
 
 int heightDiffernce(vector<int> arr, int n, int k){
-    if(n==0)return arr[0]+k;
-    if(arr[n-1]-k>0)return(min(max(arr[n-1]+k,heightDiffernce(arr, n-1, k)),max(arr[n-1]-k,heightDiffernce(arr, n-1, k)))-max(min(arr[n-1]+k,heightDiffernce(arr, n-1, k)),min(arr[n-1]-k,heightDiffernce(arr, n-1, k))));
-    else return(max(arr[n-1]+k,heightDiffernce(arr, n-1, k))-min(arr[n-1]+k,heightDiffernce(arr, n-1, k)));
+    sort(arr.begin(), arr.end());
+    int diff = arr[n-1]-arr[0];
+    int minH, maxH;
+    for(int i=1;i<n;i++){
+        minH = min(arr[0]+k, arr[i]-k);
+        maxH = max(arr[n-1]-k, arr[i-1]+k);
+        if(minH<0)continue;
+        diff = min(diff, maxH-minH);
+    }
+    return diff;
 }
 
 int main(){
