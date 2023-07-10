@@ -1,2 +1,2 @@
- << arr[0] << " " << m << endl;
-    m++;
+
+    insertAtTail(head, 14);
